@@ -9,6 +9,7 @@ verify_ssl = true
 numpy = "*"
 flake8 = "*"
 rich = "*"
+python-igraph = "*"
 
 [requires]
 python_version = "3.8"
