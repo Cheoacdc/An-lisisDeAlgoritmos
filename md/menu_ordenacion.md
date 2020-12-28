@@ -2,8 +2,8 @@
 
 Dado que algunos algoritmos de búsqueda requieren de tener un arreglo ordenado, si se ejecuta un algoritmo de ordenación
 se guardará la versión original y la versión ordenada. De esta manera no se tendrá que reordenar cada que se utilice un 
-algoritmo de búsqueda y también se podrá ordenar el mismo arreglo en los diferentes métdos de ordenación. En caso de ser
-requerido pero no se ha ordenado previamente, se utilizará Merge-sort por su tiempo de ejecución. 
+algoritmo de búsqueda y también se podrá ordenar el mismo arreglo utilizando los demás métdos de ordenación. En caso de 
+ser requerido pero no se ha ordenado previamente, se utilizará Merge-sort debido a su tiempo de ejecución. 
 
 ### Lista de algoritmos
 1. Insertion-sort
@@ -20,3 +20,7 @@ requerido pero no se ha ordenado previamente, se utilizará Merge-sort por su ti
 10. Encuentra Suma 
     * Algoritmo que, dado un número, encuentra el par de números dentro de un arreglo cuya suma sea la
     máxima respecto a dicho número.
+
+#### Nota
+Para poder observar las diferencias en tiempos de ejecución, se ejecutarán 100000 veces los algoritmos.
+De esta forma es posible mostrar la barra de progreso para cada uno de los algoritmos.  

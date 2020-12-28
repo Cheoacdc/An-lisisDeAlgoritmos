@@ -17,9 +17,3 @@ def linear_search(A: List, v: int) -> Union[int, None]:
             return j
         else:
             j += 1
-
-
-# print(arr)
-# insertion_sort(arr)
-# print(arr)
-# print(linear_search(arr, 6))

@@ -33,8 +33,3 @@ def merge_sort(arr: List, p: int = 0, r: int = None):
         merge_sort(arr, p, q)
         merge_sort(arr, q + 1, r)
         merge(arr, p, q, r)
-
-
-arr = [5,3,4,9,7,5,6,8,4,1,3,4]
-merge_sort(arr)
-print(arr)

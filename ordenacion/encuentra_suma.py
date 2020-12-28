@@ -29,7 +29,3 @@ def encuentra_suma_max(A, y):
         if bxi + bxj == y:
             break
     return bxi, bxj
-
-
-arr = [3, 5, 7, 8, 10]
-print(encuentra_suma_max(arr, 8))

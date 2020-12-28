@@ -10,3 +10,8 @@
 #### Módulos externos utilizados:
 * Numpy: Para el manejo de arreglos el uso de infinito
 * Rich: Para una mejor presentación en la consola.
+
+
+##### Nota
+En cualquier promt se puede ingresar 'q' o 'quit' para regresar al menú anterior. En el caso del menú principal, para salir del
+programa

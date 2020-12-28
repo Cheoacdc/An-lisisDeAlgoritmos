@@ -2,6 +2,8 @@ import math
 
 from typing import List
 
+from utils.helpers import exchange
+
 
 def left_of(i: int) -> int:
     return 2*(i + 1) - 1
@@ -9,12 +11,6 @@ def left_of(i: int) -> int:
 
 def right_of(i: int) -> int:
     return 2 * (i + 1)
-
-
-def exchange(arr: List, i: int, largest: int) -> None:
-    largest_val = arr[largest]
-    arr[largest] = arr[i]
-    arr[i] = largest_val
 
 
 def max_heapify(arr: List, i: int, heapsize: int) -> None:
@@ -43,9 +39,3 @@ def heap_sort(arr: List) -> None:
         heapsize -= 1
         max_heapify(arr, 0, heapsize)
 
-
-arr = [2,21,5,2,6,3,7,2]
-# build_max_heap(arr)
-# print(arr)
-heap_sort(arr)
-print(arr)

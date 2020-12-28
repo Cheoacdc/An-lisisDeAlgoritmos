@@ -39,7 +39,7 @@ class Menu(metaclass=abc.ABCMeta):
         secs *= 1000
         print(secs)
         with Progress() as progress:
-            task1 = progress.add_task(f"[red]{msg}...", total=secs)
+            task1 = progress.add_task(f"[red]{msg} 100000 veces...", total=secs)
 
             while not progress.finished:
                 progress.update(task1, advance=0.02)

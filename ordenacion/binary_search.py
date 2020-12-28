@@ -49,21 +49,3 @@ def binary_search_m(
         if not j > m:
             return best
         return binary_search_m(arr, x, m + 1, j, best)
-
-
-# arr = [1,3,4,5,6,9,11,13,14,25]
-# print(arr)
-# print(binary_search_r(arr, 9, 0, len(arr) - 1))
-# print(binary_search_r(arr, 10, 0, len(arr) - 1))
-# print(binary_search_r(arr, 2, 0, len(arr) - 1))
-# print(binary_search_r(arr, 9, 0, len(arr) - 1))
-# print(binary_search_r(arr, 10, 0, len(arr) - 1))
-# print(binary_search_i(arr, 13, 0, len(arr) - 1))
-# print(binary_search_i(arr, 2, 0, len(arr) - 1))
-# print(7, binary_search_m(arr, 7, 0, len(arr) - 1))
-# print(2, binary_search_m(arr, 2, 0, len(arr) - 1))
-# print(8, binary_search_m(arr, 8, 0, len(arr) - 1))
-# print(10, binary_search_m(arr, 10, 0, len(arr) - 1))
-# print(12, binary_search_m(arr, 12, 0, len(arr) - 1))
-# print(16, binary_search_m(arr, 16, 0, len(arr) - 1))
-# print(0, arr[binary_search_m(arr, 0, 0, len(arr) - 1)])

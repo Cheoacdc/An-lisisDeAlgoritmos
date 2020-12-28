@@ -47,3 +47,9 @@ def print_arr(arr: List, title: str = "Arreglo", console: Console = None, limit:
             table.add_row("n", *[str(n) for n in arr[row*limit:((row + 1) * limit)]])
             console.print(table, justify="center")
     print('\n')
+
+
+def exchange(arr: List, i: int, j: int) -> None:
+    aux = arr[j]
+    arr[j] = arr[i]
+    arr[i] = aux

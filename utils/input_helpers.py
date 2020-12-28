@@ -5,6 +5,7 @@ from rich.console import Console
 
 from typing import List, Union
 
+from utils.errors import QuitException
 from utils.helpers import print_arr
 
 
@@ -22,7 +23,7 @@ def get_int(msg: str = 'Ingrese el valor', cota_inf: int = None, cota_sup: int =
     while True:
         n = input(f'{msg}: ')
         if n == 'q' or n == 'quit':
-            return None
+            raise QuitException()
         n = check_int(n)
         if n is None:
             print('[bold red]**Ingrese un entero válido**[/]\n')

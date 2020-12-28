@@ -1,15 +1,20 @@
+import time
+
 from menus.menu import Menu
 
 from ordenacion.binary_search import binary_search_i, binary_search_m
+from ordenacion.counting_sort import counting_sort
 from ordenacion.encuentra_suma import encuentra_suma_max
 from ordenacion.heap_sort import heap_sort
 from ordenacion.insertion_sort import insertion_sort, linear_search
 from ordenacion.merge_sort import merge_sort
+from ordenacion.quicksort import quicksort, randomized_quicksort
 
 from rich.console import Console
 
 from typing import Dict, List
 
+from utils.errors import QuitException
 from utils.helpers import clear_screen, print_arr, wait_enter
 from utils.input_helpers import confirmation, get_array, get_int
 
@@ -37,6 +42,27 @@ class MenuOrdenacion(Menu):
                 'fun': heap_sort,
                 'type': 'ord',
                 'import': 'from ordenacion.heap_sort import heap_sort'
+            },
+            '4': {
+                'name': 'Quicksort',
+                'fun': quicksort,
+                'type': 'ord',
+                'import': 'from ordenacion.quicksort import quicksort'
+            },
+            '5': {
+                'name': 'Randomized Quicksort',
+                'fun': randomized_quicksort,
+                'type': 'ord',
+                'import': 'from ordenacion.quicksort import randomized_quicksort'
+            },
+            '6': {
+                'name': 'Counting Sort',
+                'fun': counting_sort,
+                'type': 'ord',
+                'import': 'from ordenacion.counting_sort import counting_sort',
+                'params': [
+                    {'name': 'el valor del elemento máximo del arreglo'}
+                ]
             },
             '7': {
                 'name': 'Linear Search',
@@ -83,23 +109,26 @@ class MenuOrdenacion(Menu):
                 'ordered': True,
                 'msg': 'El par de elementos cuya suma es máxima con respecto al valor dado son',
                 'import': 'from ordenacion.encuentra_suma import encuentra_suma_max'
-            },
-            'total': 10
+            }
         }
 
     def start(self):
         while True:
             self.print_md_file('menu_ordenacion')
-            self.console.print('Para salir del menú en el que se encuentre, presione "q"', justify='center')
-            total = self.options['total']
-            opc = get_int(f'¿Qué algoritmo desea utilizar? (1 a {total})', 1, total)
-            if opc is None:
+            # self.console.print('Para salir del menú en el que se encuentre, presione "q"', justify='center')
+            total = len(self.options)
+            try:
+                opc = get_int(f'¿Qué algoritmo desea utilizar? (1 a {total})', 1, total)
+            except QuitException:
                 if confirmation('Está por regresar al menú principal, ¿desea continuar?', self.console):
                     break
                 else:
                     continue
-            else:
+            try:
                 self.execute_algorithm(self.options[str(opc)])
+            except QuitException:
+                self.console.print('Regresando al menú de ordenación...', style='bold red')
+                time.sleep(1)
 
     def execute_algorithm(self, algorithm: Dict):
         self.print_algorithm_menu(algorithm)
@@ -111,12 +140,15 @@ class MenuOrdenacion(Menu):
         wait_enter(self.console, 'para volver al menú de ordenación y búsqueda')
 
     def exec_ord(self, algorithm: Dict) -> None:
-        params = self.get_params(algorithm.get('params', []))
-        self.arreglo_ordenado = [n for n in self.arreglo]
-        algorithm['fun'](self.arreglo_ordenado, *params)
-        self.progressbar(algorithm, self.arreglo, params, 'Ordenando')
-        self.console.print('El arreglo tras ejecutar el algoritmo: ')
-        print_arr(self.arreglo_ordenado, 'Arreglo ordenado:')
+        try:
+            params = self.get_params(algorithm.get('params', []))
+            self.arreglo_ordenado = [n for n in self.arreglo]
+            algorithm['fun'](self.arreglo_ordenado, *params)
+            self.progressbar(algorithm, self.arreglo, params, 'Ordenando')
+            self.console.print('El arreglo tras ejecutar el algoritmo: ')
+            print_arr(self.arreglo_ordenado, 'Arreglo ordenado:')
+        except IndexError:
+            self.console.print('Ocurrió un error, no se ingresaron los datos correctos', style='bold red')
 
     def exec_bus(self, algorithm: Dict):
         if algorithm.get('ordered', False):
