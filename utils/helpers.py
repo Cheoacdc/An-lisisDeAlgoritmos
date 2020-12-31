@@ -3,7 +3,7 @@ import math
 import os
 import sys
 
-from typing import List
+from typing import Dict, List
 
 from rich.console import Console
 from rich.table import Table
@@ -46,6 +46,20 @@ def print_arr(arr: List, title: str = "Arreglo", console: Console = None, limit:
                 table.add_column(str(col + row*limit), style="cyan")
             table.add_row("n", *[str(n) for n in arr[row*limit:((row + 1) * limit)]])
             console.print(table, justify="center")
+    print('\n')
+
+
+def print_dict_arr(arr: List[Dict], keys: List[Dict], title: str = "Arreglo", console: Console = None, limit: int = 15) -> None:
+    if console is None:
+        console = Console()
+    rows = len(arr)
+    table = Table(title=title)
+    table.add_column("i", justify="cen|er", no_wrap=True)
+    for key in keys:
+        table.add_column(key['name'], style="cyan")
+    for row in range(rows):
+        table.add_row(str(row), *[str(arr[row][key['key']]) for key in keys])
+    console.print(table, justify="center")
     print('\n')
 
 
