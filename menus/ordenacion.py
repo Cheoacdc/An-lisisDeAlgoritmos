@@ -15,7 +15,7 @@ from rich.console import Console
 from typing import Dict, List
 
 from utils.errors import QuitException
-from utils.helpers import clear_screen, print_arr, wait_enter
+from utils.helpers import print_arr, wait_enter
 from utils.input_helpers import confirmation, get_array, get_int
 
 
@@ -115,7 +115,6 @@ class MenuOrdenacion(Menu):
     def start(self):
         while True:
             self.print_md_file('menu_ordenacion')
-            # self.console.print('Para salir del menú en el que se encuentre, presione "q"', justify='center')
             total = len(self.options)
             try:
                 opc = get_int(f'¿Qué algoritmo desea utilizar? (1 a {total})', 1, total)
@@ -178,12 +177,6 @@ class MenuOrdenacion(Menu):
                 self.print_algorithm_menu(algorithm, arr)
             else:
                 break
-
-    def print_algorithm_menu(self, algorithm: Dict, arreglo: List = None) -> None:
-        clear_screen()
-        self.print_md(f'# {algorithm["name"]}')
-        if arreglo:
-            print_arr(arreglo, 'Arreglo utilizado:', self.console)
 
     def set_arreglo(self):
         if self.arreglo:

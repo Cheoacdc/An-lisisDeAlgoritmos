@@ -9,7 +9,7 @@ from rich.progress import Progress
 
 from typing import Dict, List
 
-from utils.helpers import clear_screen
+from utils.helpers import clear_screen, print_arr
 
 
 class Menu(metaclass=abc.ABCMeta):
@@ -30,6 +30,12 @@ class Menu(metaclass=abc.ABCMeta):
     def print_md(self, string: str) -> None:
         self.console.print(Markdown(string))
         print('\n')
+
+    def print_algorithm_menu(self, algorithm: Dict, arreglo: List = None) -> None:
+        clear_screen()
+        self.print_md(f'# {algorithm["name"]}')
+        if arreglo:
+            print_arr(arreglo, 'Arreglo utilizado:', self.console)
 
     @classmethod
     def progressbar(cls, algorithm: Dict, arr: List, params: List, msg: str):

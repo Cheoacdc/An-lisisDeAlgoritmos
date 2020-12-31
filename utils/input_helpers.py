@@ -3,10 +3,10 @@ import numpy as np
 from rich import print
 from rich.console import Console
 
-from typing import List, Union
+from typing import Dict, List, Union
 
 from utils.errors import QuitException
-from utils.helpers import print_arr
+from utils.helpers import print_arr, print_dict_arr
 
 
 def check_int(num: str) -> int or None:
@@ -33,6 +33,14 @@ def get_int(msg: str = 'Ingrese el valor', cota_inf: int = None, cota_sup: int =
             return n
 
 
+def get_str(msg: str = 'Ingrese el valor') -> str:
+    while True:
+        cadena = input(f'{msg}: ')
+        if cadena == 'quit':
+            raise QuitException()
+        return cadena
+
+
 def get_array() -> List or None:
     while True:
         n = get_int('¿Cuántos elementos tiene el arreglo?')
@@ -46,6 +54,29 @@ def get_array() -> List or None:
             val = get_int(f'Ingrese el valor del elemento #{i + 1}')
             arr.append(val)
         print_arr(arr, 'El arreglo es: ')
+        if confirmation():
+            break
+    return arr
+
+
+def get_dict_array(keys: List[Dict]) -> List or None:
+    while True:
+        n = get_int('¿Cuántos elementos tiene el arreglo?')
+        if confirmation(f'n = {n}, ¿desea continuar?'):
+            break
+    if n is None:
+        return None
+    while True:
+        arr = []
+        print('')
+        for i in range(0, n):
+            obj = {}
+            for key in keys:
+                input_str = f'Ingrese {key["msg"]} del elemento #{i + 1}'
+                obj[key['key']] = get_int(input_str) if key['type'] == 'int' else get_str(input_str)
+            arr.append(obj)
+            print('')
+        print_dict_arr(arr, keys=keys, title='El arreglo es: ')
         if confirmation():
             break
     return arr
