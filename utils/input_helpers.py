@@ -41,19 +41,23 @@ def get_str(msg: str = 'Ingrese el valor') -> str:
         return cadena
 
 
-def get_array() -> List or None:
+def get_array(
+        tipo: str = 'int',  msg: str = 'Ingrese el valor del elemento #', offset: bool = False,
+        cols_name: str = 'i', rows_name: str = 'n'
+) -> List or None:
     while True:
         n = get_int('¿Cuántos elementos tiene el arreglo?')
         if confirmation(f'n = {n}, ¿desea continuar?'):
             break
     if n is None:
         return None
+    fun = get_int if tipo == 'int' else get_str
     while True:
-        arr = []
+        arr = [0] if offset else []
         for i in range(0, n):
-            val = get_int(f'Ingrese el valor del elemento #{i + 1}')
+            val = fun(f'{msg}{i + 1}')
             arr.append(val)
-        print_arr(arr, 'El arreglo es: ')
+        print_arr(arr, 'El arreglo es: ', cols_name=cols_name, rows_name=rows_name)
         if confirmation():
             break
     return arr

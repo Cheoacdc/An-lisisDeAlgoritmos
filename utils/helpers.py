@@ -20,17 +20,20 @@ def wait_enter(console, msg: str = 'para continuar'):
     console.input(f'\n\n[blink]Presione enter {msg}...[/]')
 
 
-def print_arr(arr: List, title: str = "Arreglo", console: Console = None, limit: int = 25) -> None:
+def print_arr(
+        arr: List, title: str = "Arreglo", console: Console = None,
+        limit: int = 25, cols_name: str = 'i', rows_name: str = 'n', i: int = 0
+) -> None:
     if console is None:
         console = Console()
     cols = len(arr)
     rows = math.ceil(len(arr) / limit)
     if rows == 1:
         table = Table(title=title)
-        table.add_column("i", justify="center", no_wrap=True)
-        for col in range(cols):
+        table.add_column(cols_name, justify="center", no_wrap=True)
+        for col in range(i, cols + i):
             table.add_column(str(col), style="cyan")
-        table.add_row("n", *[str(n) for n in arr])
+        table.add_row(rows_name, *[str(n) for n in arr])
         console.print(table, justify="center")
     else:
         for row in range(rows):
@@ -39,12 +42,12 @@ def print_arr(arr: List, title: str = "Arreglo", console: Console = None, limit:
             else:
                 title = f'Parte #{row + 1}'
             table = Table(title=title)
-            table.add_column("i", justify="center", no_wrap=True)
+            table.add_column(cols_name, justify="center", no_wrap=True)
             printed_cols = min(cols, limit)
             cols -= limit
             for col in range(printed_cols):
                 table.add_column(str(col + row*limit), style="cyan")
-            table.add_row("n", *[str(n) for n in arr[row*limit:((row + 1) * limit)]])
+            table.add_row(rows_name, *[str(n) for n in arr[row*limit:((row + 1) * limit)]])
             console.print(table, justify="center")
     print('\n')
 

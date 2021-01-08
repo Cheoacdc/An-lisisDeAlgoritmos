@@ -1,8 +1,9 @@
 import time
 
-from menus.ordenacion import MenuOrdenacion
 from menus.greedy import MenuGreedy
 from menus.menu import Menu
+from menus.ordenacion import MenuOrdenacion
+from menus.prog_din import MenuProgDin
 
 from utils.errors import QuitException
 from utils.helpers import wait_enter
@@ -15,7 +16,7 @@ class MainMenu(Menu):
         self.options = {
             '1': MenuOrdenacion,
             '2': MenuGreedy,
-            '3': print
+            '3': MenuProgDin
         }
 
     def start(self) -> None:
