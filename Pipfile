@@ -10,6 +10,7 @@ numpy = "*"
 flake8 = "*"
 rich = "*"
 python-igraph = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "3.8"

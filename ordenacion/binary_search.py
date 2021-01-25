@@ -49,3 +49,24 @@ def binary_search_m(
         if not j > m:
             return best
         return binary_search_m(arr, x, m + 1, j, best)
+
+
+def binary_search_max_dict(
+    arr: List, x: Union[int, float], i: int = 0, j: int = None, best: int = 0, key: str = 'value'
+) -> Union[int, None]:
+    j = len(arr) - 1 if j is None else j
+    m = math.ceil((i + j - 1)/2)
+    if x == arr[m][key]:
+        return m
+    elif (x - arr[m][key] > 0) and (x - arr[m][key] < x - arr[best][key]):
+        best = m
+    if x < arr[m][key]:
+        if not i < m:
+            if arr[best][key] > x:
+                return None
+            return best
+        return binary_search_max_dict(arr, x, i, m - 1, best, key)
+    else:
+        if not j > m:
+            return best
+        return binary_search_max_dict(arr, x, m + 1, j, best, key)

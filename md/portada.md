@@ -8,7 +8,7 @@
 * Cormen, T. H. et al.(2009). Introduction to algorithms (Third ed.). Cambridge, MA: MIT Press.
 
 #### Módulos externos utilizados:
-* Numpy: Para el manejo de arreglos el uso de infinito
+* Numpy: Para el manejo de arreglos y el uso de infinito.
 * Rich: Para una mejor presentación en la consola.
 
 

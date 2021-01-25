@@ -1,5 +1,6 @@
 import time
 
+from menus.graphs_menu import MenuGraphs
 from menus.greedy import MenuGreedy
 from menus.menu import Menu
 from menus.ordenacion import MenuOrdenacion
@@ -16,7 +17,8 @@ class MainMenu(Menu):
         self.options = {
             '1': MenuOrdenacion,
             '2': MenuGreedy,
-            '3': MenuProgDin
+            '3': MenuProgDin,
+            '4': MenuGraphs
         }
 
     def start(self) -> None:
@@ -25,8 +27,9 @@ class MainMenu(Menu):
             wait_enter(self.console)
             while True:
                 self.print_md_file('main_menu')
+                total = len(self.options)
                 try:
-                    opc = get_int('¿Qué tipo de algoritmo desea utilizar? (1, 2 o 3)', 1, 3)
+                    opc = get_int(f'¿Qué tipo de algoritmo desea utilizar? (1 a {total})', 1, total)
                     self.options[str(opc)](self.console).start()
                 except QuitException:
                     if confirmation('Está por salir del programa, ¿desea continuar?', self.console):

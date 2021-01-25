@@ -38,6 +38,9 @@ def get_str(msg: str = 'Ingrese el valor') -> str:
         cadena = input(f'{msg}: ')
         if cadena == 'quit':
             raise QuitException()
+        if cadena == '':
+            print('No puede ingresar un espacio en blanco.')
+            continue
         return cadena
 
 

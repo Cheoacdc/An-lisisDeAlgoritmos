@@ -7,7 +7,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.progress import Progress
 
-from typing import Dict, List
+from typing import Dict, List, Union
 
 from utils.helpers import clear_screen, print_arr
 
@@ -31,11 +31,24 @@ class Menu(metaclass=abc.ABCMeta):
         self.console.print(Markdown(string))
         print('\n')
 
-    def print_algorithm_menu(self, algorithm: Dict, arreglo: List = None) -> None:
+    def print_graph(self, graph: Dict, vecinos: str = 'vecinos', weighted: bool = False):
+        for node in graph:
+            string = f'{node}: '
+            for vecino in graph[node][vecinos]:
+                w = '' if not weighted else graph[node][vecinos][vecino]
+                string += f'-{w}->{vecino}, '
+            string = string[:-2]
+            self.console.print(string, style='bold blue')
+
+    def print_algorithm_menu(self, algorithm: Dict, arreglo: Union[List, Dict] = None, weighted: bool = False) -> None:
         clear_screen()
         self.print_md(f'# {algorithm["name"]}')
         if arreglo:
-            print_arr(arreglo, 'Arreglo utilizado:', self.console)
+            if type(arreglo) is dict:
+                self.console.print('Gráfica utilizada', justify='center')
+                self.print_graph(arreglo, weighted=weighted)
+            else:
+                print_arr(arreglo, 'Arreglo utilizado:', self.console)
 
     @classmethod
     def progressbar(cls, algorithm: Dict, arr: List, params: List, msg: str):
