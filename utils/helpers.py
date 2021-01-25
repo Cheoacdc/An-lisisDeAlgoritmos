@@ -52,16 +52,29 @@ def print_arr(
     print('\n')
 
 
-def print_dict_arr(arr: List[Dict], keys: List[Dict], title: str = "Arreglo", console: Console = None, limit: int = 15) -> None:
+def print_dict_arr(arr: List[Dict], keys: List[Dict], title: str = "Arreglo", console: Console = None) -> None:
     if console is None:
         console = Console()
     rows = len(arr)
     table = Table(title=title)
-    table.add_column("i", justify="cen|er", no_wrap=True)
+    table.add_column("i", justify="center", no_wrap=True)
     for key in keys:
         table.add_column(key['name'], style="cyan")
     for row in range(rows):
         table.add_row(str(row), *[str(arr[row][key['key']]) for key in keys])
+    console.print(table, justify="center")
+    print('\n')
+
+
+def print_dict_graph(graph: Dict, keys: List[Dict], title: str = "Grafo", console: Console = None) -> None:
+    if console is None:
+        console = Console()
+    table = Table(title=title)
+    table.add_column("nodo", justify="center", no_wrap=True)
+    for key in keys:
+        table.add_column(key['name'], style="cyan")
+    for node in graph:
+        table.add_row(node, *[str(graph[node][key['key']]) for key in keys])
     console.print(table, justify="center")
     print('\n')
 
