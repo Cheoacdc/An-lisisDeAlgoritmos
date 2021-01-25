@@ -1,0 +1,274 @@
+('C:\\Users\\Lenovo T450\\Documents\\7moSemestre\\Análisis de '
+ 'algoritmos\\code\\algoritmos\\build\\app\\PKG-00.pkg',
+ {'BINARY': 1,
+  'DATA': 1,
+  'EXECUTABLE': 1,
+  'EXTENSION': 1,
+  'PYMODULE': 1,
+  'PYSOURCE': 1,
+  'PYZ': 0},
+ [('PYZ-00.pyz',
+   'C:\\Users\\Lenovo T450\\Documents\\7moSemestre\\Análisis de '
+   'algoritmos\\code\\algoritmos\\build\\app\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\struct.pyo',
+   'PYMODULE'),
+  ('pyimod01_os_path',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\PyInstaller\\loader\\pyimod01_os_path.pyc',
+   'PYMODULE'),
+  ('pyimod02_archive',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\PyInstaller\\loader\\pyimod02_archive.pyc',
+   'PYMODULE'),
+  ('pyimod03_importers',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\PyInstaller\\loader\\pyimod03_importers.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\Lenovo '
+   'T450\\.virtualenvs\\algoritmos-wQzsgyNN\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   'C:\\Users\\Lenovo '
+   'T450\\.virtualenvs\\algoritmos-wQzsgyNN\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('app',
+   'C:\\Users\\Lenovo T450\\Documents\\7moSemestre\\Análisis de '
+   'algoritmos\\code\\algoritmos\\app.py',
+   'PYSOURCE'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\scripts\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('python38.dll',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\scripts\\python38.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('libopenblas.3JEZX7MU2MO3QXAHU7L6VB7M4UJAWPR4.gfortran-win32.dll',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\.libs\\libopenblas.3JEZX7MU2MO3QXAHU7L6VB7M4UJAWPR4.gfortran-win32.dll',
+   'BINARY'),
+  ('select',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_overlapped',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_ssl',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_asyncio',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_queue',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('unicodedata',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_multiprocessing',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_decimal',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_ctypes',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_lzma',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('numpy.core._multiarray_tests',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\core\\_multiarray_tests.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.core._multiarray_umath',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\core\\_multiarray_umath.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.linalg.lapack_lite',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\linalg\\lapack_lite.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random.mtrand',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\mtrand.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._sfc64',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_sfc64.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._philox',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_philox.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._pcg64',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_pcg64.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._mt19937',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_mt19937.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random.bit_generator',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\bit_generator.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._generator',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_generator.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._bounded_integers',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_bounded_integers.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.random._common',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\random\\_common.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.fft._pocketfft_internal',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\fft\\_pocketfft_internal.cp38-win32.pyd',
+   'EXTENSION'),
+  ('numpy.linalg._umath_linalg',
+   'c:\\users\\lenovo '
+   't450\\.virtualenvs\\algoritmos-wqzsgynn\\lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp38-win32.pyd',
+   'EXTENSION'),
+  ('libcrypto-1_1.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Roaming\\TinyTeX\\bin\\win32\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\DLLs\\libffi-7.dll',
+   'BINARY'),
+  ('base_library.zip',
+   'C:\\Users\\Lenovo T450\\Documents\\7moSemestre\\Análisis de '
+   'algoritmos\\code\\algoritmos\\build\\app\\base_library.zip',
+   'DATA'),
+  ('Include\\pyconfig.h',
+   'C:\\Users\\Lenovo '
+   'T450\\AppData\\Local\\Programs\\Python\\Python38-32\\Include\\pyconfig.h',
+   'DATA'),
+  ('app.exe.manifest',
+   'C:\\Users\\Lenovo T450\\Documents\\7moSemestre\\Análisis de '
+   'algoritmos\\code\\algoritmos\\build\\app\\app.exe.manifest',
+   'BINARY'),
+  ('pyi-windows-manifest-filename app.exe.manifest', '', 'OPTION')],
+ False,
+ False,
+ False,
+ [])
