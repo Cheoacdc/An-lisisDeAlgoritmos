@@ -1,8 +1,15 @@
-from typing import Dict, List
+# Kruskal
 
-from ordenacion.merge_sort import merge_sort_dict
+## Descripción:
+Este algoritmo se utiliza para encontrar el árbol de expansión mínima de una gráfica, la forma en la que resuelve el problema es *Greedy*.
+* Input: Una gráfica **G** representada como lista de adyacencia.
+* Output: Las aristas pertenecientes al árbol de expansión mínima.
+* Tiempo de ejecución: O(ElgV)
+## Código utilizado:
 
-
+### Funciones de apoyo:
+Estas funciones son fundamentales para la ejecución del algoritmo. Se utilizan para identificar si se crea un ciclo o no durante la ejecución del algoritmo principal.
+```python
 def make_set(x: Dict):
     x['pointer'] = x
     x['rank'] = 0
@@ -26,8 +33,10 @@ def link(x: Dict, y: Dict):
         x['pointer'] = y
         if x['rank'] == y['rank']:
             y['rank'] += 1
+```
 
-
+### Función **Kruskal**
+```python
 def kruskal(graph: Dict):
     sol = []
     edges = []
@@ -43,3 +52,4 @@ def kruskal(graph: Dict):
             sol.append(edge)
             union(u, v)
     return sol
+```

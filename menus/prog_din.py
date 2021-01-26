@@ -24,14 +24,17 @@ class MenuProgDin(Menu):
             '1': {
                 'name': 'Sucesión Común Más Larga',
                 'fun': self.execute_lcs,
+                'description': 'lcs'
             },
             '2': {
                 'name': 'Orden de multiplicación de matrices',
                 'fun': self.matrix_menu,
+                'description': 'matrices'
             },
             '3': {
-                'name': 'Cortado de varillas',
+                'name': 'Cortado de Varillas',
                 'fun': self.cut_rod_menu,
+                'description': 'cut_rod'
             },
         }
 
@@ -53,8 +56,11 @@ class MenuProgDin(Menu):
                 time.sleep(1)
 
     def execute_algorithm(self, algorithm: Dict):
+        if confirmation('¿Desea ver la descripción del algoritmo?', self.console):
+            self.print_description(algorithm)
+            wait_enter(self.console, 'para proceder al menú del algoritmo')
         algorithm['fun'](algorithm)
-        wait_enter(self.console, 'para volver al menú de ordenación y búsqueda')
+        wait_enter(self.console, 'para volver al menú de programación dinámica')
 
     def execute_lcs(self, algorithm: Dict):
         self.print_algorithm_menu(algorithm)

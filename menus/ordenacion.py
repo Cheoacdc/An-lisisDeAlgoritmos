@@ -29,37 +29,43 @@ class MenuOrdenacion(Menu):
                 'name': 'Insertion-sort',
                 'fun': insertion_sort,
                 'type': 'ord',
-                'import': 'from ordenacion.insertion_sort import insertion_sort'
+                'import': 'from ordenacion.insertion_sort import insertion_sort',
+                'description': 'insertion_sort'
             },
             '2': {
                 'name': 'Merge-sort',
                 'fun': merge_sort,
                 'type': 'ord',
-                'import': 'from ordenacion.merge_sort import merge_sort'
+                'import': 'from ordenacion.merge_sort import merge_sort',
+                'description': 'merge_sort'
             },
             '3': {
                 'name': 'Heap-sort',
                 'fun': heap_sort,
                 'type': 'ord',
-                'import': 'from ordenacion.heap_sort import heap_sort'
+                'import': 'from ordenacion.heap_sort import heap_sort',
+                'description': 'heap_sort'
             },
             '4': {
                 'name': 'Quicksort',
                 'fun': quicksort,
                 'type': 'ord',
-                'import': 'from ordenacion.quicksort import quicksort'
+                'import': 'from ordenacion.quicksort import quicksort',
+                'description': 'quicksort'
             },
             '5': {
                 'name': 'Randomized Quicksort',
                 'fun': randomized_quicksort,
                 'type': 'ord',
-                'import': 'from ordenacion.quicksort import randomized_quicksort'
+                'import': 'from ordenacion.quicksort import randomized_quicksort',
+                'description': 'rand_quicksort'
             },
             '6': {
                 'name': 'Counting Sort',
                 'fun': counting_sort,
                 'type': 'ord',
                 'import': 'from ordenacion.counting_sort import counting_sort',
+                'description': 'counting_sort',
                 'params': [
                     {'name': 'el valor del elemento máximo del arreglo'}
                 ]
@@ -71,7 +77,8 @@ class MenuOrdenacion(Menu):
                     {'name': 'el valor a encontrar'}
                 ],
                 'type': 'bus',
-                'import': 'from ordenacion.insertion_sort import linear_search'
+                'import': 'from ordenacion.insertion_sort import linear_search',
+                'description': 'linear_search'
             },
             '8': {
                 'name': 'Binary Search',
@@ -83,7 +90,8 @@ class MenuOrdenacion(Menu):
                 ],
                 'type': 'bus',
                 'ordered': True,
-                'import': 'from ordenacion.binary_search import binary_search_i'
+                'import': 'from ordenacion.binary_search import binary_search_i',
+                'description': 'binary_search'
             },
             '9': {
                 'name': 'Binary Search (Max)',
@@ -97,7 +105,8 @@ class MenuOrdenacion(Menu):
                 'ordered': True,
                 'msg': 'El elemento máximo con respecto al valor dado es',
                 'value': True,
-                'import': 'from ordenacion.binary_search import binary_search_m'
+                'import': 'from ordenacion.binary_search import binary_search_m',
+                'description': 'binary_search_max'
             },
             '10': {
                 'name': 'Encuentra suma máxima',
@@ -108,7 +117,8 @@ class MenuOrdenacion(Menu):
                 'type': 'bus',
                 'ordered': True,
                 'msg': 'El par de elementos cuya suma es máxima con respecto al valor dado son',
-                'import': 'from ordenacion.encuentra_suma import encuentra_suma_max'
+                'import': 'from ordenacion.encuentra_suma import encuentra_suma_max',
+                'description': 'suma_max'
             }
         }
 
@@ -130,6 +140,9 @@ class MenuOrdenacion(Menu):
                 time.sleep(1)
 
     def execute_algorithm(self, algorithm: Dict):
+        if confirmation('¿Desea ver la descripción del algoritmo?', self.console):
+            self.print_description(algorithm)
+            wait_enter(self.console, 'para proceder al menú del algoritmo')
         self.print_algorithm_menu(algorithm)
         self.set_arreglo()
         if algorithm['type'] == 'ord':

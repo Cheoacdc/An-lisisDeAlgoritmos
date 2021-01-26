@@ -44,19 +44,3 @@ def bfs_dict(graph: Dict, root: Dict) -> None:
                 graph[v]['predecesor'] = u['name']
                 queue.append(graph[v])
         u['color'] = 'black'
-
-
-r = {'vecinos': [1, 3]}
-g = [r, {'vecinos': [2]}, {}, {'vecinos': [1, 4]}, {}]
-bfs(g, r)
-print(g)
-
-g = {
-    '1': {'name': '1', 'vecinos': ['2', '4']},
-    '2': {'name': '2', 'vecinos': ['3']},
-    '3': {'name': '3'},
-    '4': {'name': '4', 'vecinos': ['2', '5']},
-    '5': {'name': '5'}
-}
-bfs_dict(g, g['1'])
-print(g)

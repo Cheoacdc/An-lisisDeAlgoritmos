@@ -27,31 +27,3 @@ def topological_sort_dict(graph: Dict) -> List:
         aux.extend(result)
         result = aux
     return result
-
-
-g = [
-    {'name': 'undershorts', 'vecinos': [1, 7]},
-    {'name': 'pants', 'vecinos': [2, 7]},
-    {'name': 'belt', 'vecinos': [3]},
-    {'name': 'shirt', 'vecinos': [2, 4]},
-    {'name': 'tie', 'vecinos': [5]},
-    {'name': 'jacket'},
-    {'name': 'socks', 'vecinos': [7]},
-    {'name': 'shoes'},
-    {'name': 'watch'},
-]
-topological_sort(g)
-
-g = {
-    'undershorts': {'name': 'undershorts', 'vecinos': ['pants', 'shoes']},
-    'pants': {'name': 'pants', 'vecinos': ['belt', 'shoes']},
-    'belt': {'name': 'belt', 'vecinos': ['shirt']},
-    'shirt': {'name': 'shirt', 'vecinos': ['belt', 'tie']},
-    'tie': {'name': 'tie', 'vecinos': ['jacket']},
-    'jacket': {'name': 'jacket'},
-    'socks': {'name': 'socks', 'vecinos': ['shoes']},
-    'shoes': {'name': 'shoes'},
-    'watch': {'name': 'watch'},
-}
-
-topological_sort_dict(g)
