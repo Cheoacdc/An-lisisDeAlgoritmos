@@ -50,13 +50,17 @@ class Menu(metaclass=abc.ABCMeta):
             else:
                 print_arr(arreglo, 'Arreglo utilizado:', self.console)
 
+    def print_description(self, algorithm: Dict):
+        clear_screen()
+        path = os.path.join('algoritmos', algorithm['description'])
+        self.print_md_file(path)
+
     @classmethod
     def progressbar(cls, algorithm: Dict, arr: List, params: List, msg: str):
         statement = f'{algorithm["fun"].__name__}({[n for n in arr]}, *{params})'
         secs = timeit.timeit(statement, setup=algorithm['import'], number=100)
-        print(secs)
         secs *= 1000
-        print(secs)
+        print(f'\nTiempo aproximado: {secs}')
         with Progress() as progress:
             task1 = progress.add_task(f"[red]{msg} 100000 veces...", total=secs)
 

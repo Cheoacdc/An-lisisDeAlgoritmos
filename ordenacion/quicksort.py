@@ -35,6 +35,6 @@ def randomized_quicksort(arr: List, p: int = 0, r: int = None) -> None:
     if r is None:
         r = len(arr) - 1
     if p < r:
-        q = partition(arr, p, r)
+        q = randomized_partition(arr, p, r)
         quicksort(arr, p, q - 1)
         quicksort(arr, q + 1, r)

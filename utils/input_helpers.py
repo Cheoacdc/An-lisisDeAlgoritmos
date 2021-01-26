@@ -49,7 +49,7 @@ def get_array(
         cols_name: str = 'i', rows_name: str = 'n'
 ) -> List or None:
     while True:
-        n = get_int('¿Cuántos elementos tiene el arreglo?')
+        n = get_int('¿Cuántos elementos tiene el arreglo?', cota_inf=0)
         if confirmation(f'n = {n}, ¿desea continuar?'):
             break
     if n is None:

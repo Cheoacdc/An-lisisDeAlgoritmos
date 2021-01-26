@@ -1,13 +1,15 @@
-import numpy as np
+# Ford Fulkerson
 
-from typing import Dict
-
-from graphs.dijkstra import relax, initialize_single_source
-
-from ordenacion.binary_search import binary_search_max_dict
-
-
-def ford_fulkerson(graph: Dict):
+## Descripción:
+Este algoritmo busca el flujo máximo que puede tener una gráfica. La gráfica debe tener un nodo *source*, del cual sólo sale flujo, y un nodo *well*, del cual sólo entra flujo. No se permiten flujos negativos, en caso de tener un flujo *f* negativo de *u* a *v*, se puede representar como *|f|* de *v* a *u*.
+* Input: Una gráfica  **graph** representada como lista de adyacencia.
+* Output: La gráfica con los flujos desde *source* a cada nodo. Para conocer el flujo máximo basta con sumar los flujos que recibe el nodo **well**.
+* Tiempo de ejecución: La implementación en este programa es de O(F(V(V + lgV))), sin embargo con Fibonacci Heaps se puede conseguir un tiempo de O(F(VlgV + E)). Esto se debe a que se utiliza **Dijkstra** dependiendo del número de aristas del flujo.
+## Código utilizado:
+### Función **Ford Fulkerson**
+Esta es la función principal del algoritmo. Se apoya de dos funciones que comparte con el algoritmo **Bellman Ford**. Además, se utiliza **Binary Search** para evitar reordenar por completo la *queue*.
+```python
+def ford_fulkerson(graph):
     for u in graph:
         nodo = graph[u]
         for v in nodo['capacidades']:
@@ -25,8 +27,10 @@ def ford_fulkerson(graph: Dict):
                 graph[v]['flujos'][u] = -graph[u]['flujos'][v]
         else:
             break
-
-
+```
+### Función **Get Shortest Path**
+Aquí se utiliza una versión modificada de **Dikstra**, además que se va calculando la capacidad mínima del camino mientras se encuentra el camino, para evitar recorrerlo varias veces.
+```python
 def get_shortest_path(graph: Dict):
     modified_dijkstra(graph)
     min_cap = np.inf
@@ -43,9 +47,11 @@ def get_shortest_path(graph: Dict):
         min_cap = cap if cap < min_cap else min_cap
         current_node = predecesor
     return path, min_cap
-
-
-def modified_dijkstra(graph: Dict):
+```
+### Función **Modified Dijkstra**
+Se adaptó **Dijkstra** para ajustarse a las necesidades del problema, sin embargo son modificaciones menores, como que siempre se parte del nodo *source* y el nombre de las *keys* en las que se buscan los vecinos, en este caso es *capacidades*. Esto último es más relevante para el lenguaje de programación que para el algoritmo mismo.
+```python
+def modified_dijkstra(graph):
     initialize_single_source(graph, graph['source'])
     queue = [graph['source']]
     visited = []
@@ -70,3 +76,4 @@ def modified_dijkstra(graph: Dict):
                 queue = new_queue
             else:
                 queue.append(v)
+```

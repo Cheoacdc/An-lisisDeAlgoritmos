@@ -23,8 +23,9 @@ class MenuGreedy(Menu):
                 'fun': self.execute_hoffman,
                 'keys': [
                     {'key': 'letter', 'name': 'letra', 'msg': 'la letra', 'type': 'str'},
-                    {'key': 'value', 'name': 'repeticiones', 'msg': 'el número de repeticiones', 'type': 'int'}
-                ]
+                    {'key': 'value', 'name': 'repeticiones', 'msg': 'el número de repeticiones', 'type': 'int'},
+                ],
+                'description': 'hoffman'
             },
             '2': {
                 'name': 'Seleccionador de actividades',
@@ -32,7 +33,8 @@ class MenuGreedy(Menu):
                 'keys': [
                     {'key': 'start', 'name': 'inicio', 'msg': 'el inicio', 'type': 'int'},
                     {'key': 'end', 'name': 'final', 'msg': 'el final', 'type': 'int'}
-                ]
+                ],
+                'description': 'activity_selector'
             }
         }
 
@@ -68,6 +70,9 @@ class MenuGreedy(Menu):
         )
 
     def execute_algorithm(self, algorithm: Dict):
+        if confirmation('¿Desea ver la descripción del algoritmo?', self.console):
+            self.print_description(algorithm)
+            wait_enter(self.console, 'para proceder al menú del algoritmo')
         self.print_algorithm_menu(algorithm)
         arr = get_dict_array(algorithm['keys'])
         algorithm['fun'](arr)

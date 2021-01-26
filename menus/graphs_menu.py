@@ -28,6 +28,7 @@ class MenuGraphs(Menu):
             '1': {
                 'name': 'Breadth First Search',
                 'fun': self.bfs_menu,
+                'description': 'bfs',
                 'keys': [
                     {'key': 'distancia', 'name': 'nodos de distancia'},
                     {'key': 'predecesor', 'name': 'predecesor'}
@@ -36,6 +37,7 @@ class MenuGraphs(Menu):
             '2': {
                 'name': 'Depth First Search',
                 'fun': self.execute_dfs,
+                'description': 'dfs',
                 'keys': [
                     {'key': 'i', 'name': 'tiempo al entrar'},
                     {'key': 'f', 'name': 'tiempo al salir'},
@@ -45,11 +47,13 @@ class MenuGraphs(Menu):
             },
             '3': {
                 'name': 'Topological Sort',
-                'fun': self.execute_topological_sort
+                'fun': self.execute_topological_sort,
+                'description': 'topological_sort',
             },
             '4': {
                 'name': 'Dijkstra',
                 'fun': self.dijkstra_menu,
+                'description': 'dijkstra',
                 'keys': [
                     {'key': 'distancia', 'name': 'distancia'},
                     {'key': 'predecesor', 'name': 'predecesor'}
@@ -58,6 +62,7 @@ class MenuGraphs(Menu):
             '5': {
                 'name': 'Bellman-Ford',
                 'fun': self.bellman_ford_menu,
+                'description': 'bellman_ford',
                 'keys': [
                     {'key': 'distancia', 'name': 'distancia'},
                     {'key': 'predecesor', 'name': 'predecesor'}
@@ -66,10 +71,12 @@ class MenuGraphs(Menu):
             '6': {
                 'name': 'Ford-Fulkerson',
                 'fun': self.execute_ford,
+                'description': 'ford_fulkerson',
             },
             '7': {
                 'name': 'Kruskal',
                 'fun': self.execute_kruskal,
+                'description': 'kruskal',
                 'keys': [
                     {'key': 'u', 'name': 'u'},
                     {'key': 'v', 'name': 'v'},
@@ -96,6 +103,9 @@ class MenuGraphs(Menu):
                 time.sleep(1)
 
     def execute_algorithm(self, algorithm: Dict):
+        if confirmation('¿Desea ver la descripción del algoritmo?', self.console):
+            self.print_description(algorithm)
+            wait_enter(self.console, 'para proceder al menú del algoritmo')
         self.print_algorithm_menu(algorithm)
         algorithm['fun'](algorithm)
         wait_enter(self.console, 'para volver al menú de ordenación y búsqueda')
