@@ -19,6 +19,15 @@ El objetivo de este proyecto es tener todos los algoritmos vistos en clase imple
 ## Instrucciones
 Para ejecutar el programa, es evidente que respetar la estructura de los directorios es fundamental, ya que de esto depende el funcionamiento correcto del programa.
 
+Para crear un repositorio copia y descargar los archivos, correr el siguiente comando en el directorio deseado.
+
+```zsh
+$ git init
+$ git remote add origin https://github.com/Cheoacdc/An-lisisDeAlgoritmos.git
+$ git fetch origin
+$ git merge origin/master
+```
+
 ### Dependencias
 Por otro lado, es indispensable trabajar con un entorno virtual igual al que se utilizó para el desarrollo del programa. Aquí se presentan dos alternativas.
 
