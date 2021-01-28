@@ -19,7 +19,7 @@ El objetivo de este proyecto es tener todos los algoritmos vistos en clase imple
 ## Instrucciones
 Para ejecutar el programa, es evidente que respetar la estructura de los directorios es fundamental, ya que de esto depende el funcionamiento correcto del programa.
 
-Para crear un repositorio copia y descargar los archivos, correr el siguiente comando en el directorio deseado.
+Para crear un repositorio copia y descargar los archivos, correr los siguientes comandos en el directorio deseado.
 
 ```zsh
 $ git init
